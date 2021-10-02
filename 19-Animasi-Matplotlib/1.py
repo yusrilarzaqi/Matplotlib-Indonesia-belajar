@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
 from matplotlib.animation import FuncAnimation
-from ipyton import display
+from IPython import display
 
 ## Khusus Jupyter nootbook
 # Review Figure
@@ -19,8 +19,8 @@ def animated(i):
 	line.set_data(x,y)
 	return line
 
-anim = FuncAnimation(fig, animated, frame=200, interval=20)
-video = anim.to_html5.video()
+anim = FuncAnimation(fig, animated, frames=200, interval=20)
+video = anim.to_html5_video()
 html = display.HTML(video)
 
 display.display(html)
